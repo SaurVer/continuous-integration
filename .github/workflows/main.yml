@@ -9,14 +9,13 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
-      with:
-        node-version: '20'
+      
 
     - name: Set up python3.8
       uses: actions/setup-python@v3
       with:
         python-version: 3.8
-        node-version: '20'
+        
 
     - name: Install dependencies
       run: |
@@ -28,7 +27,7 @@ jobs:
 
     - name: Test with pytest
       run: |
-        make test
+        make tests
 
     - name: Format code
       run: |
